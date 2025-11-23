@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
-    <div class="particles-js">
-      <div class="container">
+    <div id="particles-js"></div>
+    <div class="container">
         <div class="pixel-text">
           <span id="typewriter"></span>
           <span class="cursor">|</span>
@@ -21,7 +21,7 @@
             <div class="about-section">
               <h2>Sobre mí</h2>
               <p>Soy estudiante de la carrera Analista de Sistemas. Me encuentro a un cuatrimestre de recibirme. Por ello estoy en 
-              la búsqueda de una primer experiencia laboral en el mundo del IT.
+              la búsqueda de continuar expandiendo mi experiencia laboral en el mundo del IT.
               Busco aportar mis habilidades de comunicación, organización y planificación, así como
               mi iniciativa y capacidad para resolver problemas y adaptarme a diferentes entornos.</p>
             </div>
@@ -120,6 +120,9 @@
             <div class="language-icon">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap">
             </div>
+            <div class="language-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+            </div>
           </div>
         </div>
 
@@ -155,13 +158,30 @@
             </div>
           </div>
         </div>
-        <div class="development">
-          <h6>(Este portfolio se encuentra en desarrollo)</h6>
-          <br/>
-          <h6>Vuelva más tarde</h6>
+        <div class="projects-section">
+          <h2>Proyectos Web</h2>
+          <div class="projects-container">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="Fotos/logoTest.png" alt="Ugarte Chef Store">
+              </div>
+              <div class="project-info">
+                <h3>Ugartechef Store</h3>
+                <p class="project-description">Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.</p>
+                <div class="project-technologies">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Firebase</span>
+                </div>
+                <a href="https://ugartechef.store" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Visitar sitio
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>
     </div>
     <script src="js/script.js"></script>
     <script src="js/particles.min.js"></script>
