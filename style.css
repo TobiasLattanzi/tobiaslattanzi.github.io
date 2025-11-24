@@ -476,28 +476,55 @@ html {
   transition: transform 0.3s ease;
 }
 
-.language-icon::after {
+.language-icon[title]::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: #121620;
+  color: #7dcfff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 2px solid #7dcfff;
+  box-shadow: 0 0 15px rgba(125, 207, 255, 0.5);
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.language-icon[title]::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  filter: blur(4px);
-  transition: all 0.3s ease;
+  transform: translateX(-50%) translateY(6px);
+  border: 6px solid transparent;
+  border-top-color: #7dcfff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1001;
+}
+
+.language-icon[title]:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-15px);
+}
+
+.language-icon[title]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(1px);
 }
 
 .language-icon:hover {
   transform: translateY(-5px);
-}
-
-.language-icon:hover::after {
-  width: 80%;
-  height: 12px;
-  opacity: 0.4;
 }
 
 .language-icon img {
