@@ -9,6 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
+    <div class="top-controls">
+      <button id="theme-toggle" class="theme-toggle" title="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="es" title="Español">
+          <img src="https://flagcdn.com/w40/ar.png" alt="Español">
+        </button>
+        <button class="lang-btn" data-lang="en" title="English">
+          <img src="https://flagcdn.com/w40/us.png" alt="English">
+        </button>
+      </div>
+    </div>
+
     <div id="particles-js"></div>
     <div class="container">
         <div class="pixel-text">
@@ -19,68 +47,68 @@
         <div class="content">
           <div class="left-section">
             <div class="about-section">
-              <h2>Sobre mí</h2>
-              <p>Soy estudiante de la carrera Analista de Sistemas. Me encuentro a un cuatrimestre de recibirme. Por ello estoy en 
+              <h2 data-i18n="aboutTitle">Sobre mí</h2>
+              <p data-i18n="aboutText">Soy estudiante de la carrera Analista de Sistemas. Me encuentro a un cuatrimestre de recibirme. Por ello estoy en
               la búsqueda de continuar expandiendo mi experiencia laboral en el mundo del IT.
               Busco aportar mis habilidades de comunicación, organización y planificación, así como
               mi iniciativa y capacidad para resolver problemas y adaptarme a diferentes entornos.</p>
             </div>
-        
+
             <div class="contact-info">
-              <h2>Contacto</h2>
+              <h2 data-i18n="contactTitle">Contacto</h2>
               <p><i class="fas fa-phone" data-value="+542323336429"></i><a href="https://wa.me/+542323336429" target="_blank"> +54 2323 336429</a></p>
               <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tobiaslattanzi1@gmail.com" target="_blank"> tobiaslattanzi1@gmail.com</a></p>
-              <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/tobias-lattanzi-a7a127266/" target="_blank"> Ir a mi LinkedIn</a></p>
-              <p><i class="fa-brands fa-github"></i> <a href="https://github.com/TobiasLattanzi?tab=repositories" target="_blank"> Ir a mi repositorio de GitHub</a></p>
+              <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/tobias-lattanzi-a7a127266/" target="_blank" data-i18n="linkedinLink"> Ir a mi LinkedIn</a></p>
+              <p><i class="fa-brands fa-github"></i> <a href="https://github.com/TobiasLattanzi?tab=repositories" target="_blank" data-i18n="githubLink"> Ir a mi repositorio de GitHub</a></p>
             </div>
           </div>
 
           <div class="profile-image">
             <img src="https://i.ibb.co/PVDCXLp/Yo.jpg" alt="Tobias Lattanzi">
-            <a href="Archivos/TobiasLattanzi.pdf" download="Tobias_Lattanzi_CV" class="btn-download">Descargar Currículum</a>
+            <a href="Archivos/TobiasLattanzi.pdf" download="Tobias_Lattanzi_CV" class="btn-download" data-i18n="downloadCV">Descargar Currículum</a>
           </div>
         </div>
-        <h2 class="aprendizaje">Mi aprendizaje</h2>
+        <h2 class="aprendizaje" data-i18n="learningTitle">Mi aprendizaje</h2>
         <div class="timeline">
             <div class="timeline-line"></div>
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-point"></div>
                     <div class="timeline-content">
-                        <div class="timeline-title">Bachiller</div>
+                        <div class="timeline-title" data-i18n="timeline1Title">Bachiller</div>
                         <div class="timeline-description">
-                            <p>2016 - 2021</p>
-                            EESN°4 | Bachillerato en Arte - Artes Visuales
+                            <p data-i18n="timeline1Date">2016 - 2021</p>
+                            <span data-i18n="timeline1Desc">EESN°4 | Bachillerato en Arte - Artes Visuales</span>
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-point"></div>
                     <div class="timeline-content">
-                        <div class="timeline-title">Foundational C# with Microsoft</div>
+                        <div class="timeline-title" data-i18n="timeline2Title">Foundational C# with Microsoft</div>
                         <div class="timeline-description">
-                            <p>2024 - 2024</p>
-                            FreeCodeCamp | C# Developer
+                            <p data-i18n="timeline2Date">2024 - 2024</p>
+                            <span data-i18n="timeline2Desc">FreeCodeCamp | C# Developer</span>
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-point"></div>
                     <div class="timeline-content">
-                        <div class="timeline-title">Analista de Sistemas</div>
+                        <div class="timeline-title" data-i18n="timeline3Title">Analista de Sistemas</div>
                         <div class="timeline-description">
-                            <p>2022 - 2024 (Cursada finalizada)</p>
-                            Instituto ORT | Analista de Sistemas
+                            <p data-i18n="timeline3Date">2022 - 2024 (Cursada finalizada)</p>
+                            <span data-i18n="timeline3Desc">Instituto ORT | Analista de Sistemas</span>
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-point"></div>
                     <div class="timeline-content">
-                        <div class="timeline-title">Coder Camp</div>
+                        <div class="timeline-title" data-i18n="timeline4Title">Coder Camp</div>
                         <div class="timeline-description">
-                            <p>2025 - 2025 (Actualidad)</p>
-                            Coder House | BootCamp de Backend
+                            <p data-i18n="timeline4Date">2025 - 2025 (Actualidad)</p>
+                            <span data-i18n="timeline4Desc">Coder House | BootCamp de Backend</span>
                         </div>
                     </div>
                 </div>
@@ -88,7 +116,7 @@
         </div>
 
         <div class="languages-section">
-          <h2>Lenguajes de programación</h2>
+          <h2 data-i18n="programmingTitle">Lenguajes de programación</h2>
           <div class="language-icons">
             <div class="language-icon" title="Java">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
@@ -112,7 +140,7 @@
         </div>
       
         <div class="languages-section">
-          <h2>Tecnologías</h2>
+          <h2 data-i18n="technologiesTitle">Tecnologías</h2>
           <div class="language-icons">
             <div class="language-icon" title=".NET">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original-wordmark.svg" alt=".NET">
@@ -127,7 +155,7 @@
         </div>
 
         <div class="languages-section">
-          <h2>Herramientas</h2>
+          <h2 data-i18n="toolsTitle">Herramientas</h2>
           <div class="language-icons">
             <div class="language-icon" title="UML">
               <img src="Fotos/Unified Modelling Language (UML).png" alt="UML">
@@ -159,7 +187,7 @@
           </div>
         </div>
         <div class="projects-section">
-          <h2>Proyectos Web</h2>
+          <h2 data-i18n="projectsTitle">Proyectos Web</h2>
           <div class="projects-container">
             <div class="project-card">
               <div class="project-image">
@@ -167,7 +195,7 @@
               </div>
               <div class="project-info">
                 <h3>Ugartechef Store</h3>
-                <p class="project-description">Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.</p>
+                <p class="project-description" data-i18n="projectDesc">Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.</p>
                 <div class="project-technologies">
                   <span class="tech-tag">HTML</span>
                   <span class="tech-tag">CSS</span>
@@ -175,7 +203,7 @@
                   <span class="tech-tag">Firebase</span>
                 </div>
                 <a href="https://ugartechef.store" target="_blank" class="project-link">
-                  <i class="fas fa-external-link-alt"></i> Visitar sitio
+                  <i class="fas fa-external-link-alt"></i> <span data-i18n="visitSite">Visitar sitio</span>
                 </a>
               </div>
             </div>
@@ -183,6 +211,9 @@
         </div>
 
     </div>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/lang-switcher.js"></script>
     <script src="js/script.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>

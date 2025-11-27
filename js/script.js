@@ -1,66 +1,90 @@
-const prefix = "Hola, soy ";
-const phrases = ["Tobias Lattanzi", "estudiante de Sistemas"];
 const typewriter = document.getElementById('typewriter');
+let typingTimeout = null;
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let isTypingPrefix = true;
 let prefixIndex = 0;
 
-typewriter.textContent = "";
-
-function type() {
-  if (isTypingPrefix) {
-    if (prefixIndex < prefix.length) {
-      typewriter.textContent += prefix[prefixIndex];
-      prefixIndex++;
-      setTimeout(type, 150);
-      return;
-    } else {
-      isTypingPrefix = false;
-    }
-  }
-
-  const currentPhrase = phrases[phraseIndex];
-  
-  if (!isDeleting) {
-    if (charIndex < currentPhrase.length) {
-      typewriter.textContent = prefix + currentPhrase.substring(0, charIndex + 1);
-      charIndex++;
-      setTimeout(type, 150);
-    } else {
-      isDeleting = true;
-      setTimeout(type, 2000);
-    }
-  } else {
-    if (charIndex > 0) {
-      typewriter.textContent = prefix + currentPhrase.substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(type, 75);
-    } else {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      setTimeout(type, 500);
-    }
-  }
+function getTypewriterData() {
+  const lang = localStorage.getItem('language') || 'es';
+  return {
+    prefix: translations[lang].typewriterPrefix || "¡Hola! Soy ",
+    phrases: translations[lang].typewriterPhrases || ["Tobias Lattanzi", "estudiante de Sistemas"]
+  };
 }
 
-function copyToClipboard(text) {
-            // Selecciona el contenido del elemento que queremos copiar
-            const texto = document.getElementById("textoACopiar").innerText;
+function startTypewriter() {
+  // Limpiar timeout anterior si existe
+  if (typingTimeout) {
+    clearTimeout(typingTimeout);
+  }
 
-            // Usa navigator.clipboard para copiar al portapapeles
-            navigator.clipboard.writeText(texto)
-                .then(() => {
-                    
-                })
-                .catch((err) => {
-                    console.error("Error al copiar al portapapeles:", err);
-                });
-        }
+  // Resetear variables
+  phraseIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+  isTypingPrefix = true;
+  prefixIndex = 0;
+  typewriter.textContent = "";
+
+  const data = getTypewriterData();
+  const prefix = data.prefix;
+  const phrases = data.phrases;
+
+  function type() {
+    if (isTypingPrefix) {
+      if (prefixIndex < prefix.length) {
+        typewriter.textContent += prefix[prefixIndex];
+        prefixIndex++;
+        typingTimeout = setTimeout(type, 150);
+        return;
+      } else {
+        isTypingPrefix = false;
+      }
+    }
+
+    const currentPhrase = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      if (charIndex < currentPhrase.length) {
+        typewriter.textContent = prefix + currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingTimeout = setTimeout(type, 150);
+      } else {
+        isDeleting = true;
+        typingTimeout = setTimeout(type, 2000);
+      }
+    } else {
+      if (charIndex > 0) {
+        typewriter.textContent = prefix + currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingTimeout = setTimeout(type, 75);
+      } else {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingTimeout = setTimeout(type, 500);
+      }
+    }
+  }
+
+  type();
+}
+
+function copyToClipboard() {
+  const texto = document.getElementById("textoACopiar").innerText;
+
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+
+    })
+    .catch((err) => {
+      console.error("Error al copiar al portapapeles:", err);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(type, 500);
+  setTimeout(startTypewriter, 500);
 });
 
 document.querySelectorAll('.icon').forEach(icon => {
