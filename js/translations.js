@@ -28,7 +28,8 @@ const translations = {
     technologiesTitle: "Tecnologías",
     toolsTitle: "Herramientas",
     projectsTitle: "Proyectos Web",
-    projectDesc: "Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.",
+    projectDesc1: "Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.",
+    projectDesc2: "Sitio web corporativo para empresa de construcción. Incluye portafolio de proyectos, información de servicios, formulario de contacto y diseño responsive completamente optimizado para dispositivos móviles.",
     visitSite: "Visitar sitio"
   },
 
@@ -61,7 +62,9 @@ const translations = {
     technologiesTitle: "Technologies",
     toolsTitle: "Tools",
     projectsTitle: "Web Projects",
-    projectDesc: "Professional cookware online store. Complete e-commerce with product catalog, shopping cart, custom WhatsApp ordering system and an admin panel where they can modify the entire website at will.",
+    projectDesc1: "Professional cookware online store. Complete e-commerce with product catalog, shopping cart, custom WhatsApp ordering system and an admin panel where they can modify the entire website at will.",
+    projectDesc2: "Corporate website for construction company. Includes project portfolio, service information, contact form and fully responsive design optimized for mobile devices.",
     visitSite: "Visit site"
   }
 };
+
