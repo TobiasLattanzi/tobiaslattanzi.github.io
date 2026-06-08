@@ -30,6 +30,8 @@ const translations = {
     projectsTitle: "Proyectos Web",
     projectDesc1: "Tienda online de productos de cocina profesional. E-commerce completo con catálogo de productos, carrito de compras, sistema de pedidos personalizado por WhatsApp y un panel de administrador donde pueden modificar toda la web a su antojo.",
     projectDesc2: "Sitio web corporativo para empresa de construcción. Incluye portafolio de proyectos, información de servicios, formulario de contacto y diseño responsive completamente optimizado para dispositivos móviles.",
+    projectDesc3: "Tienda online de fábrica textil familiar con más de 50 años de historia. Catálogo completo de telas planas, gabardinas y forros, sistema de consultas por WhatsApp y panel de administrador para gestionar productos y contenido.",
+    projectDesc4: "Tienda online de bordados artesanales únicos y piezas restauradas. E-commerce completo con catálogo de colecciones, carrito de compras, sistema de pedidos por WhatsApp y panel de administrador para gestionar toda la web.",
     visitSite: "Visitar sitio"
   },
 
@@ -64,6 +66,8 @@ const translations = {
     projectsTitle: "Web Projects",
     projectDesc1: "Professional cookware online store. Complete e-commerce with product catalog, shopping cart, custom WhatsApp ordering system and an admin panel where they can modify the entire website at will.",
     projectDesc2: "Corporate website for construction company. Includes project portfolio, service information, contact form and fully responsive design optimized for mobile devices.",
+    projectDesc3: "Online store for a family textile factory with over 50 years of history. Full catalog of flat fabrics, gabardines and linings, WhatsApp inquiry system and admin panel to manage products and content.",
+    projectDesc4: "Online store for unique handcrafted embroideries and restored vintage pieces. Complete e-commerce with collection catalog, shopping cart, WhatsApp ordering system and admin panel to manage the entire website.",
     visitSite: "Visit site"
   }
 };
